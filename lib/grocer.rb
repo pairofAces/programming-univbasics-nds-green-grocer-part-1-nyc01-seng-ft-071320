@@ -19,7 +19,7 @@ def consolidate_cart(cart)
   new_cart = {}
   cart.each do |items_hash|
     items_hash.each do |item, attributes|
-      new_cart[]
+      new_cart[item] ||= attributes
 end
 
 
