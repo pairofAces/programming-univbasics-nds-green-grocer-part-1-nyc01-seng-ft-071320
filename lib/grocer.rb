@@ -21,7 +21,7 @@ def consolidate_cart(cart)
     items_hash.each do |item, attributes|
       new_cart[item] ||= attributes
       new_cart[item][:count] ? new_cart[item][:count] += 1 :
-      
+      new_cart[item][:count] = 1
 end
 
 
